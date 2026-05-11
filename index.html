@@ -1,0 +1,1150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio · Radhitya Guntoro Adhi · 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500;1,8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================
+   Portfolio · McKinsey-inspired editorial · A4 print
+   ========================================================== */
+:root{
+  --bg:        #F4EFE3;   /* warm cream */
+  --paper:     #FBF8EE;
+  --ink:       #15171C;
+  --ink-2:     #2C2F36;
+  --mute:      #756E5F;
+  --mute-2:    #A39C8A;
+  --rule:      #C9C0A8;
+  --rule-soft: #E0D8C2;
+  --navy:      #14253D;
+  --navy-2:    #2A3F5F;
+  --deep:      #0E1A2C;
+  --accent:    #B8451E;   /* burnt sienna */
+  --accent-2:  #E6CFB7;   /* highlighter */
+  --positive:  #2F6B4A;
+  --negative:  #9B2C2C;
+
+  --ff-sans:  "Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --ff-serif: "Source Serif 4","Source Serif Pro",Georgia,"Times New Roman",serif;
+  --ff-mono:  "JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{margin:0;padding:0;}
+body{
+  font-family:var(--ff-sans);
+  background:#2a2724;
+  color:var(--ink);
+  font-size:10pt;
+  line-height:1.5;
+  letter-spacing:-0.003em;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+  font-feature-settings: "ss01","cv11";
+}
+
+/* ============ PAGE SHELL ============ */
+.page{
+  width:210mm;
+  height:297mm;
+  background:var(--bg);
+  color:var(--ink);
+  margin:0 auto 8mm;
+  padding:14mm 16mm 12mm;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  box-shadow:0 6px 28px rgba(0,0,0,0.18);
+}
+
+/* ============ SHARED CHROME (page header & footer rule) ============ */
+.chrome-top{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:18px;
+  align-items:center;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--rule);
+  font-family:var(--ff-mono);
+  font-size:7.5pt;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--mute);
+  font-weight:500;
+}
+.chrome-top .ch{color:var(--ink);}
+.chrome-top .ch .pt{color:var(--accent);margin-right:8px;}
+.chrome-top .sec{color:var(--mute);justify-self:center;text-transform:none;letter-spacing:0.04em;font-family:var(--ff-sans);font-style:italic;font-size:8pt;}
+.chrome-top .doc{color:var(--ink);font-variant-numeric:tabular-nums;}
+
+.chrome-bottom{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:18px;
+  align-items:center;
+  padding-top:8px;
+  border-top:1px solid var(--rule);
+  margin-top:auto;
+  font-family:var(--ff-mono);
+  font-size:7.5pt;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--mute);
+  font-weight:500;
+}
+.chrome-bottom .src{
+  font-size:7.5pt;letter-spacing:0.02em;text-transform:none;
+  font-family:var(--ff-sans);color:var(--mute);font-weight:400;
+  font-style:italic;
+}
+.chrome-bottom .pn{color:var(--ink);font-variant-numeric:tabular-nums;}
+
+/* ============ TITLES ============ */
+.action-title{
+  font-family:var(--ff-serif);
+  font-weight:400;
+  font-size:21pt;
+  line-height:1.15;
+  letter-spacing:-0.015em;
+  color:var(--ink);
+  margin:10px 0 5px 0;
+  max-width:96%;
+  text-wrap:balance;
+}
+.action-title em{font-style:italic;color:var(--accent);font-weight:400;}
+.action-title strong{
+  font-weight:500;color:var(--ink);
+  background:linear-gradient(transparent 62%, var(--accent-2) 62%, var(--accent-2) 92%, transparent 92%);
+  padding:0 2px;
+}
+.kicker{
+  font-family:var(--ff-sans);
+  font-size:9pt;
+  color:var(--mute);
+  margin-top:4px;
+  max-width:80ch;
+  line-height:1.5;
+  font-style:italic;
+}
+
+/* ============ COVER ============ */
+.s-cover{padding:0 !important;background:var(--deep) !important;height:297mm;}
+.cover-grid{
+  display:grid;
+  grid-template-columns:1.05fr 1fr;
+  height:100%;
+  color:#F0E9D8;
+}
+.cover-left{
+  padding:20mm 18mm;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-right:1px solid rgba(240,233,216,0.16);
+  position:relative;
+}
+.cover-mark{
+  font-family:var(--ff-mono);
+  font-size:8pt;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:rgba(240,233,216,0.55);
+  display:flex;gap:14px;align-items:center;
+}
+.cover-mark .dot{width:5px;height:5px;background:var(--accent);display:inline-block;border-radius:50%;}
+.cover-display{
+  font-family:var(--ff-serif);
+  font-weight:400;
+  font-size:54pt;
+  line-height:0.98;
+  letter-spacing:-0.025em;
+  color:#F4EDDB;
+  margin:0;
+}
+.cover-display em{font-style:italic;color:var(--accent);}
+.cover-lede{
+  font-family:var(--ff-serif);
+  font-style:italic;
+  font-size:13pt;
+  line-height:1.42;
+  color:rgba(240,233,216,0.78);
+  max-width:38ch;
+  margin:14mm 0 0 0;
+}
+.cover-stamp{
+  font-family:var(--ff-mono);
+  font-size:7.5pt;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:rgba(240,233,216,0.5);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px 18px;
+}
+.cover-stamp b{color:rgba(240,233,216,0.92);font-weight:500;display:block;margin-top:3px;letter-spacing:0;font-family:var(--ff-sans);font-size:9pt;text-transform:none;line-height:1.3;overflow-wrap:anywhere;}
+.cover-stamp b a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(240,233,216,0.35);}
+
+.cover-right{
+  background:var(--bg);
+  color:var(--ink);
+  padding:20mm 16mm;
+  display:flex;flex-direction:column;justify-content:space-between;
+  position:relative;
+}
+.cover-right .vol{
+  font-family:var(--ff-mono);
+  font-size:8pt;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--mute);
+}
+.cover-toc{display:flex;flex-direction:column;gap:0;}
+.cover-toc .row{
+  display:grid;
+  grid-template-columns:20px 1fr auto;
+  gap:12px;
+  align-items:baseline;
+  padding:10px 0;
+  border-top:1px solid var(--rule-soft);
+  font-family:var(--ff-serif);
+  font-size:12pt;
+  color:var(--ink);
+  line-height:1.22;
+}
+.cover-toc .row:last-child{border-bottom:1px solid var(--rule-soft);}
+.cover-toc .num{font-family:var(--ff-mono);font-size:7.5pt;color:var(--accent);letter-spacing:0.1em;padding-top:3px;font-weight:500;}
+.cover-toc .lab{font-family:var(--ff-mono);font-size:7.5pt;color:var(--mute);letter-spacing:0.08em;white-space:nowrap;}
+.cover-credit{
+  display:flex;flex-direction:column;gap:0;
+  border-top:1px solid rgba(21,23,28,0.18);
+}
+.cover-credit span{
+  display:grid;grid-template-columns:22mm 1fr;gap:10px;
+  align-items:baseline;
+  padding:2.6mm 0;
+  border-bottom:1px solid rgba(21,23,28,0.10);
+}
+.cover-credit i{
+  font-family:var(--ff-mono);font-style:normal;
+  font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--mute);font-weight:500;
+}
+.cover-credit b{
+  color:var(--ink);font-weight:500;
+  font-family:var(--ff-sans);font-size:9pt;
+  letter-spacing:-0.005em;
+  overflow-wrap:anywhere;
+  line-height:1.3;
+}
+.cover-credit b a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);}
+
+/* ============ ABOUT PAGE ============ */
+.exec-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:5mm;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--rule);
+}
+.exec-stats > div{
+  padding:3.5mm 5mm 3.5mm 0;
+  border-right:1px solid var(--rule-soft);
+  display:grid;grid-template-columns:1fr;gap:2px;align-content:center;
+}
+.exec-stats > div + div{padding-left:5mm;padding-right:5mm;}
+.exec-stats > div:last-child{border-right:none;padding-right:0;}
+.exec-stats .lab{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);}
+.exec-stats .v{
+  font-family:var(--ff-serif);font-size:32pt;line-height:0.92;
+  font-weight:400;letter-spacing:-0.025em;color:var(--ink);
+  margin:2px 0 2px 0;font-variant-numeric:tabular-nums;
+}
+.exec-stats .v sup{font-size:12pt;vertical-align:14px;color:var(--accent);margin-left:2px;}
+.exec-stats .v.acc{color:var(--accent);font-style:italic;}
+.exec-stats .desc{font-size:8.5pt;color:var(--ink-2);line-height:1.45;max-width:32ch;}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:9mm;
+  margin-top:5mm;
+}
+.about-text p{
+  margin-bottom:2.5mm;color:var(--ink-2);font-size:9pt;line-height:1.55;
+  font-family:var(--ff-sans);
+}
+.about-text p:last-child{margin-bottom:0;}
+.about-text strong{
+  color:var(--ink);font-weight:500;
+  background:linear-gradient(transparent 62%, var(--accent-2) 62%, var(--accent-2) 92%, transparent 92%);
+  padding:0 1px;
+}
+.about-text .pull{
+  font-family:var(--ff-serif);font-style:italic;
+  font-size:13pt;line-height:1.36;color:var(--ink);
+  border-left:2px solid var(--accent);padding-left:5mm;
+  margin-bottom:4mm;letter-spacing:-0.005em;
+}
+
+.fact-list{display:flex;flex-direction:column;}
+.fact{
+  display:grid;grid-template-columns:1fr auto;gap:8px;
+  padding:3.2mm 0;border-top:1px solid var(--rule-soft);
+  align-items:baseline;
+}
+.fact:first-child{border-top:1px solid var(--ink);}
+.fact:last-child{border-bottom:1px solid var(--ink);}
+.fact .l{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.12em;text-transform:uppercase;color:var(--mute);}
+.fact .v{font-family:var(--ff-serif);font-size:12pt;color:var(--ink);font-weight:400;letter-spacing:-0.005em;text-align:right;line-height:1.2;}
+.fact .v em{font-style:italic;color:var(--accent);}
+
+/* ============ SECTION HEAD ============ */
+.section-head{
+  display:flex;align-items:baseline;justify-content:space-between;gap:14px;
+  margin:5mm 0 3mm 0;
+  padding-bottom:2.5mm;
+  border-bottom:1px solid var(--ink);
+}
+.section-head .num{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.18em;
+  color:var(--accent);text-transform:uppercase;font-weight:500;
+}
+.section-head h3{
+  font-family:var(--ff-serif);font-weight:400;font-size:16pt;
+  letter-spacing:-0.012em;color:var(--ink);line-height:1.1;
+  flex:1;margin-left:5mm;
+}
+.section-head h3 em{font-style:italic;color:var(--accent);}
+.section-head .aside{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.12em;color:var(--mute);text-transform:uppercase;}
+
+/* ============ SKILLS ============ */
+.skills-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;
+  border-top:1px solid var(--ink);
+}
+.skill-col{
+  padding:4mm 4mm 4mm 0;border-right:1px solid var(--rule-soft);
+}
+.skill-col + .skill-col{padding-left:4mm;}
+.skill-col:last-child{border-right:none;padding-right:0;}
+.skill-col .label{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:3mm;font-weight:500;
+}
+.skill-item{
+  display:grid;grid-template-columns:1fr auto;gap:6px;
+  padding:1.3mm 0;border-bottom:1px solid var(--rule-soft);
+  font-size:8.5pt;color:var(--ink-2);align-items:baseline;
+}
+.skill-item:last-child{border-bottom:none;}
+.skill-item .lvl{
+  font-family:var(--ff-mono);font-size:7pt;color:var(--mute);
+  letter-spacing:0.08em;text-transform:uppercase;
+}
+.skill-item b{color:var(--ink);font-weight:500;}
+
+/* ============ PROJECT - LEAD CARD (hero) ============ */
+.lead{
+  margin-top:5mm;
+  display:grid;
+  grid-template-columns:1fr;
+  border-top:1px solid var(--ink);
+  border-bottom:1px solid var(--ink);
+}
+.lead-head{
+  display:grid;grid-template-columns:auto 1fr auto;gap:14px;
+  padding:4mm 0 3mm 0;
+  border-bottom:1px solid var(--rule-soft);
+  align-items:baseline;
+}
+.lead-head .tag{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--accent);font-weight:500;
+}
+.lead-head .course{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--mute);
+}
+.lead-head .badge{
+  font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.16em;
+  color:var(--accent);padding:1mm 2.5mm;border:1px solid var(--accent);
+  text-transform:uppercase;
+}
+.lead-head .badge.dark{color:var(--ink);border-color:var(--ink);}
+
+.lead-title{
+  font-family:var(--ff-serif);font-weight:400;font-size:18pt;
+  line-height:1.18;letter-spacing:-0.014em;color:var(--ink);
+  margin:3mm 0 2mm 0;text-wrap:balance;
+}
+.lead-title em{font-style:italic;color:var(--accent);}
+
+.lead-grid{
+  display:grid;grid-template-columns:1.5fr 1fr;gap:7mm;
+  padding:3mm 0;
+}
+.lead-desc{font-size:8.5pt;line-height:1.5;color:var(--ink-2);}
+.lead-desc strong{color:var(--ink);font-weight:500;}
+.lead-desc .pull{
+  font-family:var(--ff-serif);font-style:italic;font-size:11pt;
+  line-height:1.38;color:var(--ink);
+  border-left:2px solid var(--accent);padding-left:4mm;
+  margin:0 0 2.5mm 0;
+}
+
+.lead-side h5{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:2.5mm;
+}
+.lead-side ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);}
+.lead-side li{
+  padding:2.4mm 0;border-bottom:1px solid var(--rule-soft);
+  font-size:8.5pt;color:var(--ink-2);line-height:1.4;
+  display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline;
+}
+.lead-side li:last-child{border-bottom:1px solid var(--ink);}
+.lead-side li b{font-family:var(--ff-serif);font-size:11pt;color:var(--accent);font-weight:400;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-0.01em;}
+.lead-side li b.dark{color:var(--ink);font-style:italic;}
+
+.lead-foot{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;border-top:1px solid var(--rule-soft);
+  padding-top:2.5mm;padding-bottom:1mm;
+}
+.lead-foot > div{padding-right:5mm;border-right:1px solid var(--rule-soft);}
+.lead-foot > div + div{padding-left:5mm;}
+.lead-foot > div:last-child{border-right:none;padding-right:0;}
+.lead-foot .l{font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);}
+.lead-foot .v{font-size:8.5pt;color:var(--ink);font-weight:500;margin-top:1mm;line-height:1.3;font-family:var(--ff-sans);}
+.lead-foot .v.mono{font-family:var(--ff-mono);font-size:8pt;}
+
+/* ============ PROJECT - STANDARD CARD ============ */
+.proj{
+  display:grid;grid-template-columns:1fr;
+  border-top:1px solid var(--ink);
+  padding:3.5mm 0;
+  margin-top:0;
+}
+.proj + .proj{margin-top:0;}
+.proj-head{
+  display:grid;grid-template-columns:auto 1fr auto;gap:12px;
+  align-items:baseline;margin-bottom:2.5mm;
+}
+.proj-head .tag{
+  font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--accent);font-weight:500;
+}
+.proj-head .course{
+  font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.1em;
+  color:var(--mute);text-transform:uppercase;
+}
+.proj-head .badge{
+  font-family:var(--ff-mono);font-size:6.5pt;letter-spacing:0.16em;
+  color:var(--accent);padding:0.7mm 2mm;border:1px solid var(--accent);
+  text-transform:uppercase;
+}
+.proj-title{
+  font-family:var(--ff-serif);font-weight:400;font-size:14pt;
+  line-height:1.2;letter-spacing:-0.012em;color:var(--ink);
+  margin-bottom:2mm;
+}
+.proj-title em{font-style:italic;color:var(--accent);}
+
+.proj-body{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:6mm;
+  align-items:start;
+}
+.proj-desc{font-size:8.5pt;line-height:1.55;color:var(--ink-2);}
+.proj-desc strong{color:var(--ink);font-weight:500;}
+.proj-desc .method{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.04em;
+  color:var(--mute);margin-top:2mm;line-height:1.55;
+}
+.proj-desc .method b{color:var(--ink);font-weight:500;text-transform:uppercase;letter-spacing:0.12em;font-size:7pt;display:block;margin-bottom:1mm;}
+
+.proj-find{padding:0;}
+.proj-find h5{
+  font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--mute);font-weight:500;margin-bottom:2mm;
+}
+.proj-find ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink);}
+.proj-find li{
+  padding:2mm 0;border-bottom:1px solid var(--rule-soft);
+  font-size:8pt;color:var(--ink-2);line-height:1.4;
+  display:grid;grid-template-columns:auto 1fr;gap:6px;align-items:baseline;
+}
+.proj-find li:last-child{border-bottom:1px solid var(--ink);}
+.proj-find li .marker{
+  font-family:var(--ff-serif);font-style:italic;
+  color:var(--accent);font-size:11pt;line-height:0.8;font-weight:400;
+}
+.proj-find li b{color:var(--ink);font-weight:500;}
+
+/* ============ PERSONAL PROJECT CARD ============ */
+.gh{
+  padding:4mm 0;border-top:1px solid var(--ink);
+}
+.gh:last-of-type{border-bottom:1px solid var(--ink);}
+.gh-head{
+  display:grid;grid-template-columns:1fr auto;gap:12px;
+  align-items:baseline;margin-bottom:2mm;
+}
+.gh-tag{
+  font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.14em;
+  color:var(--accent);text-transform:uppercase;font-weight:500;
+}
+.gh-title{
+  font-family:var(--ff-serif);font-weight:400;font-size:14pt;
+  letter-spacing:-0.012em;color:var(--ink);line-height:1.18;margin:1mm 0;
+}
+.gh-title em{font-style:italic;color:var(--accent);}
+.gh-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:6mm;align-items:start;
+}
+.gh-desc{font-size:8.5pt;line-height:1.55;color:var(--ink-2);}
+.gh-desc .pull{
+  font-family:var(--ff-serif);font-style:italic;font-size:10pt;
+  line-height:1.42;color:var(--ink);
+  border-left:2px solid var(--accent);padding-left:3mm;margin-bottom:2.5mm;
+}
+.gh-meta{display:flex;flex-direction:column;gap:0;}
+.gh-meta .row{
+  display:grid;grid-template-columns:1fr;gap:1mm;
+  padding:2.4mm 0;border-bottom:1px solid var(--rule-soft);
+}
+.gh-meta .row:first-child{border-top:1px solid var(--ink);}
+.gh-meta .row:last-child{border-bottom:1px solid var(--ink);}
+.gh-meta .l{font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);}
+.gh-meta .v{font-family:var(--ff-mono);font-size:8pt;color:var(--ink);font-weight:500;line-height:1.4;}
+.gh-meta .v a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-2);}
+
+/* ============ CERTS & ORGS ============ */
+.cert-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--ink);
+}
+.cert{
+  padding:4mm 5mm 4mm 0;border-right:1px solid var(--rule-soft);
+  display:grid;grid-template-columns:1fr;gap:1mm;
+}
+.cert + .cert{padding-left:5mm;}
+.cert:last-child{border-right:none;padding-right:0;}
+.cert .num{font-family:var(--ff-serif);font-style:italic;font-size:22pt;color:var(--accent);line-height:0.9;font-weight:400;margin-bottom:2mm;letter-spacing:-0.01em;}
+.cert .name{font-family:var(--ff-serif);font-size:12pt;color:var(--ink);font-weight:400;letter-spacing:-0.005em;}
+.cert .issuer{font-family:var(--ff-mono);font-size:7.5pt;color:var(--mute);letter-spacing:0.1em;text-transform:uppercase;margin-top:2mm;}
+
+.org-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border-top:1px solid var(--ink);
+}
+.org{
+  padding:4mm 5mm 4mm 0;border-right:1px solid var(--rule-soft);
+}
+.org:last-child{padding-left:5mm;padding-right:0;border-right:none;}
+.org .l{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);}
+.org .v{font-family:var(--ff-serif);font-size:13pt;color:var(--ink);font-weight:400;letter-spacing:-0.005em;margin-top:2mm;line-height:1.2;}
+.org .period{font-family:var(--ff-mono);font-size:7.5pt;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;margin-top:2mm;}
+
+.course-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+  border-top:1px solid var(--ink);
+}
+.course-col{
+  padding:4mm 5mm 4mm 0;border-right:1px solid var(--rule-soft);
+}
+.course-col + .course-col{padding-left:5mm;}
+.course-col:last-child{border-right:none;padding-right:0;}
+.course-col h6{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:3mm;font-weight:500;}
+.course-col .item{
+  padding:1.8mm 0;border-bottom:1px solid var(--rule-soft);
+  font-size:8.5pt;color:var(--ink-2);line-height:1.4;
+}
+.course-col .item:last-child{border-bottom:none;}
+.course-col .item b{font-family:var(--ff-mono);font-size:7pt;color:var(--mute);letter-spacing:0.08em;display:block;margin-bottom:0.5mm;}
+
+/* ============ CLOSING ============ */
+.closing{
+  margin-top:5mm;
+  background:var(--deep);color:#F0E9D8;
+  padding:6mm 7mm;
+  display:grid;grid-template-columns:auto 1fr;gap:7mm;
+  align-items:start;
+}
+.closing-num{
+  font-family:var(--ff-serif);font-style:italic;font-size:54pt;
+  color:var(--accent);line-height:0.85;font-weight:400;
+  letter-spacing:-0.02em;
+}
+.closing-body .lab{
+  font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.2em;
+  color:rgba(240,233,216,0.55);text-transform:uppercase;font-weight:500;
+}
+.closing-body h4{
+  font-family:var(--ff-serif);font-weight:400;font-size:15pt;
+  line-height:1.18;letter-spacing:-0.012em;color:#F4EDDB;
+  margin:2mm 0 2.5mm 0;text-wrap:balance;
+}
+.closing-body h4 em{font-style:italic;color:var(--accent);}
+.closing-body p{
+  font-size:8.5pt;color:rgba(240,233,216,0.85);
+  line-height:1.55;max-width:62ch;
+}
+
+/* ============ PRINT ============ */
+@media print{
+  body{background:white;}
+  .page{margin:0;box-shadow:none;page-break-after:always;}
+  @page{margin:0;size:A4;}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════ PAGE 1 - COVER ════════════════ -->
+<div class="page s-cover">
+  <div class="cover-grid">
+    <div class="cover-left">
+      <div class="cover-mark"><span class="dot"></span><span>Vol. 01 · 2026</span><span>· Industrial Engineering Portfolio</span></div>
+
+      <div>
+        <h1 class="cover-display">Radhitya<br/>Guntoro <em>Adhi.</em></h1>
+        <p class="cover-lede">A portfolio of industrial engineering work spanning operations research, supply chain analytics, plant layout, and discrete-event simulation.</p>
+      </div>
+
+      <div class="cover-stamp">
+        <span>INSTITUTION<b>Institut Teknologi Bandung</b></span>
+        <span>PROGRAMME<b>Industrial Engineering &middot; TI</b></span>
+        <span>STANDING<b>Semester 6 &middot; Grad. 2027</b></span>
+        <span>AVAILABILITY<b>1 July to 31 August 2026</b></span>
+      </div>
+    </div>
+
+    <div class="cover-right">
+      <div class="vol">Contents &middot; 6 Pages</div>
+
+      <div class="cover-toc">
+        <div class="row"><div class="num">I</div><div>The candidate: profile, skills, posture</div><div class="lab">02</div></div>
+        <div class="row"><div class="num">II</div><div>Academic work: operations research, supply chain, layout</div><div class="lab">03 / 04</div></div>
+        <div class="row"><div class="num">III</div><div>Independent work: tools shipped on GitHub</div><div class="lab">05</div></div>
+        <div class="row"><div class="num">IV</div><div>Background: certifications, coursework, posture</div><div class="lab">06</div></div>
+      </div>
+
+      <div class="cover-credit">
+        <span><i>Email</i><b><a href="mailto:radhityaguntoroadhi@gmail.com">radhityaguntoroadhi@gmail.com</a></b></span>
+        <span><i>Phone</i><b>+62 857 1603 9738</b></span>
+        <span><i>GitHub</i><b><a href="https://github.com/radhityaz">github.com/radhityaz</a></b></span>
+        <span><i>LinkedIn</i><b><a href="https://www.linkedin.com/in/radhityaguntoroadhi/">linkedin.com/in/radhityaguntoroadhi</a></b></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════ PAGE 2 - PROFILE & SKILLS ════════════════ -->
+<div class="page">
+  <div class="chrome-top">
+    <div class="ch"><span class="pt">I</span>The candidate</div>
+    <div class="sec">Radhitya Guntoro Adhi &middot; Portfolio &middot; Vol. 01 &middot; 2026</div>
+    <div class="doc">02 / 06</div>
+  </div>
+
+  <h2 class="action-title">A 6th-semester IE student building <em>working analytical tools</em> for the manufacturing problems of <strong>PPIC, supply chain, and layout</strong>. The kind real operations face every day.</h2>
+  <div class="kicker">Three academic projects with end-to-end deliverables. Three independent tools shipped on GitHub. Available 1 July to 31 August 2026 for an industrial PKL placement.</div>
+
+  <div class="exec-stats">
+    <div>
+      <div class="lab">Academic standing</div>
+      <div class="v">6<sup>th</sup></div>
+      <div class="desc">Semester at ITB Industrial Engineering. Expected graduation 2027.</div>
+    </div>
+    <div>
+      <div class="lab">Projects delivered</div>
+      <div class="v acc">06</div>
+      <div class="desc">Three coursework deliverables and three independent Python tools, all production-ready.</div>
+    </div>
+    <div>
+      <div class="lab">PKL window</div>
+      <div class="v">8<sup>wk</sup></div>
+      <div class="desc">1 July to 31 August 2026. Open on location, with preference for industrial operations.</div>
+    </div>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p class="pull">My posture is simple: bring the analytical method, learn the floor, ship something the team can keep using.</p>
+
+      <p>
+        I read Industrial Engineering at Institut Teknologi Bandung, Cirebon Campus, with a working focus on
+        <strong>supply chain systems, facility layout, production simulation, and ERP</strong>.
+        Coursework has been the entry point; the work that interests me has consistently extended past the
+        submission deadline into reusable Python tools, now kept on GitHub.
+      </p>
+
+      <p>
+        Recent academic deliverables include a <strong>three-tier distribution network optimisation</strong>
+        (MILP, 58 nodes), a <strong>full PPIC cycle</strong> for an EV-battery manufacturer, and an
+        <strong>automated factory and office layout</strong> generator built in Visio VBA. Each was then
+        ported to a Python or Streamlit app so the method survives the course.
+      </p>
+
+      <p>
+        Looking for a PKL placement in <strong>discrete manufacturing</strong> (automotive, electronics, FMCG, or industrial components) where the analytical surface area is large enough that bringing a method actually matters.
+      </p>
+    </div>
+
+    <div class="fact-list">
+      <div class="fact"><div class="l">Institution</div><div class="v">ITB <em>Cirebon</em></div></div>
+      <div class="fact"><div class="l">Programme</div><div class="v">Industrial Engineering</div></div>
+      <div class="fact"><div class="l">Semester</div><div class="v">6 &middot; <em>2023</em></div></div>
+      <div class="fact"><div class="l">Target placement</div><div class="v">PPIC &middot; SCM &middot; IE Dept.</div></div>
+      <div class="fact"><div class="l">Industry preference</div><div class="v">Discrete manufacturing</div></div>
+      <div class="fact"><div class="l">PKL window</div><div class="v"><em>Jul 1 to Aug 31, 2026</em></div></div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <span class="num">// 01</span>
+    <h3>Technical skills, <em>by stack and by method.</em></h3>
+    <span class="aside">3 columns · 15 lines</span>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-col">
+      <div class="label">Programming</div>
+      <div class="skill-item"><span><b>Python</b>, primary</span><span class="lvl">Daily</span></div>
+      <div class="skill-item"><span><b>R</b>, statistics</span><span class="lvl">Coursework</span></div>
+      <div class="skill-item"><span><b>SQL</b>, basic / intermediate</span><span class="lvl">HackerRank</span></div>
+      <div class="skill-item"><span><b>VBA</b> for Excel, Visio</span><span class="lvl">Production</span></div>
+      <div class="skill-item"><span><b>Rust</b>, systems</span><span class="lvl">Learning</span></div>
+    </div>
+    <div class="skill-col">
+      <div class="label">IE Methods</div>
+      <div class="skill-item"><span><b>MILP</b>, network optimisation</span><span class="lvl">Tubes</span></div>
+      <div class="skill-item"><span><b>DES</b>, SimPy / Monte Carlo</span><span class="lvl">Built</span></div>
+      <div class="skill-item"><span><b>EOQ / ROP / SS / DRP</b></span><span class="lvl">Applied</span></div>
+      <div class="skill-item"><span><b>AHP</b>, supplier scoring</span><span class="lvl">Applied</span></div>
+      <div class="skill-item"><span><b>SLP / CRAFT</b>, layout</span><span class="lvl">Applied</span></div>
+    </div>
+    <div class="skill-col">
+      <div class="label">Tools &amp; Platforms</div>
+      <div class="skill-item"><span><b>Streamlit</b>, dashboards</span><span class="lvl">Shipped</span></div>
+      <div class="skill-item"><span><b>Plotly · Pandas · NumPy</b></span><span class="lvl">Daily</span></div>
+      <div class="skill-item"><span><b>Microsoft Visio</b>, automation</span><span class="lvl">VBA</span></div>
+      <div class="skill-item"><span><b>SAP ERP</b>, basic</span><span class="lvl">Coursework</span></div>
+      <div class="skill-item"><span><b>Git &amp; GitHub</b></span><span class="lvl">Daily</span></div>
+    </div>
+  </div>
+
+  <div class="chrome-bottom">
+    <div class="src">Source: self-reported · all skills demonstrable on request via coursework deliverables and GitHub repositories.</div>
+    <div></div>
+    <div class="pn">02 / 06</div>
+  </div>
+</div>
+
+
+<!-- ════════════════ PAGE 3 - ACADEMIC LEAD: OPERATIONS RESEARCH ════════════════ -->
+<div class="page">
+  <div class="chrome-top">
+    <div class="ch"><span class="pt">II</span>Academic work, lead deliverable</div>
+    <div class="sec">Radhitya Guntoro Adhi &middot; Portfolio &middot; Vol. 01 &middot; 2026</div>
+    <div class="doc">03 / 06</div>
+  </div>
+
+  <h2 class="action-title">A <strong>three-tier distribution network</strong> across Eastern Indonesia, modelled as a <em>mixed-integer linear program</em> to compress the logistics cost stack.</h2>
+  <div class="kicker">Tugas Besar · TI2201 Operations Research I · Semester 4 · Kelompok 10 · 5 contributors. Real industry case: Marx and Engels AG, a German FMCG operator in Indonesia.</div>
+
+  <div class="lead">
+    <div class="lead-head">
+      <span class="tag">// PROJ &middot; A01 &middot; Lead</span>
+      <span class="course">TI2201 &middot; Penelitian Operasional I &middot; Sem. 4 &middot; 2025</span>
+      <span class="badge dark">Completed</span>
+    </div>
+
+    <h3 class="lead-title">Distribution Network Optimisation for <em>Marx &amp; Engels AG</em> across Kalimantan, Sulawesi, and Balinusra.</h3>
+
+    <div class="lead-grid">
+      <div class="lead-desc">
+        <p class="pull">Baseline FY2023 transport cost ran 14&times; the internal estimate. The brief: rebuild the network from first principles and prove a lower-cost configuration.</p>
+
+        <p>
+          Industry case set by the TI2201 faculty. Marx and Engels AG operates a complex Indonesia-wide FMCG
+          distribution network from a single SDC in Karawang into Eastern Indonesia: Kalimantan, Sulawesi,
+          and the Bali-Nusa Tenggara corridor.
+          We mapped <strong>58 logistics nodes</strong> (1 SDC, 15 Direct DC/CPU, 12 Indirect DC, 30 Depo) and
+          two distribution legs: <strong>first-mile</strong> (port-to-DC via container shipping), and
+          <strong>middle-mile</strong> (DC-to-DC and DC-to-Depo via CDD, CDE, GrandMax, Kijang).
+        </p>
+
+        <p>
+          The model is a Mixed Integer Linear Program adapted from a CVRPTW reference (Praditya, 2019),
+          extended to a multi-echelon cost structure with four decision-variable families: warehouse supply
+          allocation, first-mile trip count by container type, middle-mile vehicle count by type and route, and
+          driver headcount. The objective minimises the full cost stack: variable trip cost, fixed container and ocean-freight cost, middle-mile fuel cost (distance / efficiency &times; price), and fixed driver and warehouse-staff cost.
+        </p>
+
+        <div class="method">
+          <b>Methods applied</b>
+          MILP formulation &middot; Fishbone (Ishikawa) root-cause analysis &middot; Influence diagram for
+          cost-driver mapping &middot; Fixed-vs-variable cost decomposition &middot; Capacity and demand
+          balance constraints &middot; Integer-trip enforcement.
+        </div>
+      </div>
+
+      <div class="lead-side">
+        <h5>Headline diagnostics</h5>
+        <ul>
+          <li><b>14&times;</b><span>FY2023 actual transport cost over the internal USD 2.6 M middle-mile estimate.</span></li>
+          <li><b class="dark">86.6k</b><span>Monthly box demand in Kalimantan against <em>52.2k</em> supply, a 34.4k shortfall.</span></li>
+          <li><b>557</b><span>First-mile container trips per month, fragmented across 20FT, 40FT, FUSO, CDD, Build Up.</span></li>
+          <li><b class="dark">58</b><span>Network nodes modelled across three regions and four facility tiers.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lead-foot">
+      <div><div class="l">Role</div><div class="v">Co-author · Chapters 1, 3, 4</div></div>
+      <div><div class="l">Team</div><div class="v">Kelompok 10 · 5 members</div></div>
+      <div><div class="l">Deliverable</div><div class="v">Conceptual model · MILP formulation · parameter dataset</div></div>
+      <div><div class="l">Reference</div><div class="v mono">Praditya 2019, CVRPTW MILP</div></div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <span class="num">// Industrial relevance</span>
+    <h3>Why this <em>generalises</em> beyond FMCG.</h3>
+    <span class="aside">Network design &middot; fleet sizing</span>
+  </div>
+
+  <div class="lead-desc" style="margin-top:1mm;">
+    <p>
+      Any multi-plant manufacturer with a customer or distribution network faces the same problem shape: first-mile raw-material in, middle-mile inter-plant or to OEM, last-mile to customer.
+      The MILP structure used here (variable + fixed cost layers, integer trip variables,
+      capacity-and-demand balance) is the standard template for network-design and fleet-sizing problems.
+      The reusable artefact is the formulation itself: <strong>swap parameters, keep the model</strong>.
+    </p>
+  </div>
+
+  <div class="chrome-bottom">
+    <div class="src">Source: Kelompok 10 Tugas Besar TI2201 · 2025 · Marx &amp; Engels AG case · all figures from internal dataset Lampiran 1.</div>
+    <div></div>
+    <div class="pn">03 / 06</div>
+  </div>
+</div>
+
+
+<!-- ════════════════ PAGE 4 - ACADEMIC SUPPORTING WORK ════════════════ -->
+<div class="page">
+  <div class="chrome-top">
+    <div class="ch"><span class="pt">II</span>Academic work, supporting deliverables</div>
+    <div class="sec">Radhitya Guntoro Adhi &middot; Portfolio &middot; Vol. 01 &middot; 2026</div>
+    <div class="doc">04 / 06</div>
+  </div>
+
+  <h2 class="action-title">Two further coursework deliverables: a <strong>full PPIC cycle</strong> for an EV manufacturer, and an <em>automated plant layout</em> generator.</h2>
+  <div class="kicker">Both projects port directly to discrete-manufacturing PPIC and IE tasks. Methods listed are demonstrable on request.</div>
+
+  <!-- Project A2: Supply Chain -->
+  <div class="proj" style="margin-top:5mm;">
+    <div class="proj-head">
+      <span class="tag">// PROJ &middot; A02</span>
+      <span class="course">TI3202 &middot; Supply Chain &amp; Resource Planning &middot; Sem. 5 &middot; 2025</span>
+      <span class="badge">Completed</span>
+    </div>
+
+    <h3 class="proj-title">Full PPIC Cycle for <em>PT Volta Energi Nusantara</em>, an EV battery manufacturer.</h3>
+
+    <div class="proj-body">
+      <div class="proj-desc">
+        End-to-end supply chain study on a 6-month, 2-material demand dataset. The deliverable walked the
+        complete PPIC loop (demand forecasting, inventory policy, multi-tier DRP, supplier selection, and warehouse sizing) and closed with a 160 m&sup2; warehouse recommendation
+        backed by a working inventory policy.
+
+        <div class="method">
+          <b>Methods applied</b>
+          Time-Series Decomposition (multiplicative) for seasonal demand &middot; EOQ with safety stock and
+          ROP at 95 % service level &middot; DRP cascade across three distribution tiers &middot; AHP supplier
+          scoring on four criteria (lead-time weight 0.503) &middot; Suprayogi warehouse sizing formula.
+        </div>
+      </div>
+
+      <div class="proj-find">
+        <h5>Key findings</h5>
+        <ul>
+          <li><span class="marker">+</span><span>Multiplicative decomposition <b>materially outperformed</b> naive forecasts on MAPE.</span></li>
+          <li><span class="marker">+</span><span>EOQ analysis recommended a <b>23 % cut</b> in ordering frequency.</span></li>
+          <li><span class="marker">+</span><span>AHP selected <b>PT Andalan</b> (Mat. A) and <b>PT Plasindo</b> (Mat. B).</span></li>
+          <li><span class="marker">+</span><span>Warehouse sized at <b>160 m&sup2;</b> via Suprayogi sizing.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project A3: Plant Layout -->
+  <div class="proj">
+    <div class="proj-head">
+      <span class="tag">// PROJ &middot; A03</span>
+      <span class="course">TI3205 &middot; Facility Layout Planning &middot; Sem. 5 &middot; 2025</span>
+      <span class="badge">Completed</span>
+    </div>
+
+    <h3 class="proj-title">Factory &amp; Office Layout Automation for <em>PT TriX Group</em> (Group C13).</h3>
+
+    <div class="proj-body">
+      <div class="proj-desc">
+        Designed and automated a full factory floor plan and office layout in Microsoft Visio via VBA macros.
+        The macro reads a parametric input file and generates room coordinates, aisle placements, door logic,
+        and furniture templates. The factory module derives department adjacency through an Activity Area
+        Diagram and emits the placement back into Visio.
+
+        <div class="method">
+          <b>Methods applied</b>
+          Systematic Layout Planning (SLP) &middot; AAD adjacency matrix with A/E/I/O/U/X classification
+          &middot; VBA shape generation for Visio &middot; Aisle and door-logic programming &middot;
+          Multi-room coordinate calculation.
+        </div>
+      </div>
+
+      <div class="proj-find">
+        <h5>Key findings</h5>
+        <ul>
+          <li><span class="marker">+</span><span>Full factory floor plan <b>generated programmatically</b> from an adjacency-matrix input.</span></li>
+          <li><span class="marker">+</span><span>Office layout macro places <b>15 room types</b> with door and aisle logic.</span></li>
+          <li><span class="marker">+</span><span>Reduced manual Visio drawing time by <b>~80 %</b> via automation.</span></li>
+          <li><span class="marker">+</span><span>SLP adjacency approach <b>directly portable</b> to injection-molding plant layout.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <span class="num">// Industrial relevance</span>
+    <h3>Where these <em>port directly.</em></h3>
+    <span class="aside">PPIC &middot; IE Dept.</span>
+  </div>
+
+  <div class="lead-desc" style="margin-top:1mm;">
+    <p>
+      The PPIC project covers the full inventory-policy loop used in component-manufacturing planning: forecasting, EOQ / ROP / SS, DRP, supplier scoring. The layout project ports cleanly to any
+      adjacency-driven manufacturing layout: injection molding, stamping, sub-assembly, electronics
+      assembly. Together they cover the analytical surface area of an IE department's day-to-day toolkit.
+    </p>
+  </div>
+
+  <div class="chrome-bottom">
+    <div class="src">Source: TI3202 and TI3205 coursework deliverables · Semester 5 · 2025 · faculty-reviewed.</div>
+    <div></div>
+    <div class="pn">04 / 06</div>
+  </div>
+</div>
+
+
+<!-- ════════════════ PAGE 5 - INDEPENDENT WORK / GITHUB ════════════════ -->
+<div class="page">
+  <div class="chrome-top">
+    <div class="ch"><span class="pt">III</span>Independent work, shipped on GitHub</div>
+    <div class="sec">Radhitya Guntoro Adhi &middot; Portfolio &middot; Vol. 01 &middot; 2026</div>
+    <div class="doc">05 / 06</div>
+  </div>
+
+  <h2 class="action-title">Three coursework methods <em>ported into reusable Python tools</em>, available on GitHub for the team to fork, use, and extend.</h2>
+  <div class="kicker">Built on Streamlit. Each tool ingests a CSV, runs the analytical engine, and renders a Plotly dashboard. No black boxes.</div>
+
+  <!-- GH 1 -->
+  <div class="gh" style="margin-top:5mm;">
+    <div class="gh-head">
+      <div>
+        <div class="gh-tag">// PROJ &middot; P01 &middot; Python · Streamlit</div>
+        <div class="gh-title">Supply Chain Decision Suite: <em>the full PPIC loop in one app.</em></div>
+      </div>
+      <span class="badge dark" style="font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.16em;color:var(--accent);padding:0.7mm 2mm;border:1px solid var(--accent);text-transform:uppercase;">Live</span>
+    </div>
+
+    <div class="gh-grid">
+      <div class="gh-desc">
+        <p class="pull">The inventory policy cycle, parametrised, with a CSV upload.</p>
+        <p>
+          Interactive Streamlit application implementing the complete supply chain analytics pipeline:
+          demand forecasting via Time-Series Decomposition Multiplicative, inventory optimisation
+          (EOQ, ROP, Safety Stock), DRP cascading across distribution tiers, AHP supplier scoring,
+          and Suprayogi warehouse sizing. Ported from coursework into a reusable, parametric tool
+          with CSV upload and Plotly visualisations.
+        </p>
+      </div>
+      <div class="gh-meta">
+        <div class="row"><div class="l">Stack</div><div class="v">Python · Streamlit · Pandas · Statsmodels · Plotly</div></div>
+        <div class="row"><div class="l">Repository</div><div class="v"><a href="https://github.com/radhityaz/supply-chain-suite">github.com/radhityaz/supply-chain-suite</a></div></div>
+        <div class="row"><div class="l">Use case</div><div class="v">PPIC · Inventory · DRP</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GH 2 -->
+  <div class="gh">
+    <div class="gh-head">
+      <div>
+        <div class="gh-tag">// PROJ &middot; P02 &middot; Python · NumPy · Streamlit</div>
+        <div class="gh-title">AAD Plant Layout Optimiser: <em>swap-search on a Visio-free canvas.</em></div>
+      </div>
+      <span class="badge dark" style="font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.16em;color:var(--accent);padding:0.7mm 2mm;border:1px solid var(--accent);text-transform:uppercase;">Live</span>
+    </div>
+
+    <div class="gh-grid">
+      <div class="gh-desc">
+        <p class="pull">Layout planning without VBA, without Visio, without leaving the browser.</p>
+        <p>
+          Web-based facility layout tool that accepts an SLP adjacency matrix (A, E, I, O, U, X ratings) and
+          applies a CRAFT-inspired pairwise swap optimisation to generate the highest-scoring 2D department
+          arrangement. Results render as an interactive Plotly grid. Ported and extended from the Visio
+          VBA coursework into a Python web app.
+        </p>
+      </div>
+      <div class="gh-meta">
+        <div class="row"><div class="l">Stack</div><div class="v">Python · NumPy · Streamlit · Plotly</div></div>
+        <div class="row"><div class="l">Repository</div><div class="v"><a href="https://github.com/radhityaz/aad-layout-optimizer">github.com/radhityaz/aad-layout-optimizer</a></div></div>
+        <div class="row"><div class="l">Use case</div><div class="v">IE Dept. · Layout · Adjacency</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GH 3 -->
+  <div class="gh">
+    <div class="gh-head">
+      <div>
+        <div class="gh-tag">// PROJ &middot; P03 &middot; Python · SimPy</div>
+        <div class="gh-title">DES Production Line Simulator: <em>queue, utilisation, bottleneck in one pass.</em></div>
+      </div>
+      <span class="badge dark" style="font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.16em;color:var(--accent);padding:0.7mm 2mm;border:1px solid var(--accent);text-transform:uppercase;">Live</span>
+    </div>
+
+    <div class="gh-grid">
+      <div class="gh-desc">
+        <p class="pull">A simple M/M/c queue, set up so a production planner can answer &lsquo;where does the line choke?&rsquo; before lunch.</p>
+        <p>
+          M/M/c queue discrete-event simulation for multi-server production systems. The planner inputs
+          arrival rate, service rate, and server count. The simulator returns average throughput time, server
+          utilisation, queue-length distribution over time, and bottleneck station identification via a
+          Plotly dashboard.
+        </p>
+      </div>
+      <div class="gh-meta">
+        <div class="row"><div class="l">Stack</div><div class="v">Python · SimPy · Streamlit · Plotly · NumPy</div></div>
+        <div class="row"><div class="l">Repository</div><div class="v"><a href="https://github.com/radhityaz/des-production-sim">github.com/radhityaz/des-production-sim</a></div></div>
+        <div class="row"><div class="l">Use case</div><div class="v">Production Eng. · Bottleneck analysis</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome-bottom">
+    <div class="src">Source: github.com/radhityaz · all repositories public · happy to walk through any of these on a call.</div>
+    <div></div>
+    <div class="pn">05 / 06</div>
+  </div>
+</div>
+
+
+<!-- ════════════════ PAGE 6 - BACKGROUND, COURSEWORK, CLOSING ════════════════ -->
+<div class="page">
+  <div class="chrome-top">
+    <div class="ch"><span class="pt">IV</span>Background &amp; posture</div>
+    <div class="sec">Radhitya Guntoro Adhi &middot; Portfolio &middot; Vol. 01 &middot; 2026</div>
+    <div class="doc">06 / 06</div>
+  </div>
+
+  <h2 class="action-title">Three certifications, two affiliations, six relevant courses, and a clear position on <em>what comes next.</em></h2>
+
+  <div class="section-head">
+    <span class="num">// 02</span>
+    <h3>Certifications, <em>verified May 2026.</em></h3>
+    <span class="aside">HackerRank</span>
+  </div>
+
+  <div class="cert-grid">
+    <div class="cert">
+      <div class="num">01</div>
+      <div class="name">SQL: Basic</div>
+      <div class="issuer">HackerRank · May 2026</div>
+    </div>
+    <div class="cert">
+      <div class="num">02</div>
+      <div class="name">Python: Basic</div>
+      <div class="issuer">HackerRank · May 2026</div>
+    </div>
+    <div class="cert">
+      <div class="num">03</div>
+      <div class="name">Problem Solving: Basic</div>
+      <div class="issuer">HackerRank · May 2026</div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <span class="num">// 03</span>
+    <h3>Affiliations &amp; activities.</h3>
+    <span class="aside">Two memberships</span>
+  </div>
+
+  <div class="org-grid">
+    <div class="org">
+      <div class="l">Mahasiswa Teknik Industri ITB (MTI)</div>
+      <div class="v">Active member</div>
+      <div class="period">2023 to Present</div>
+    </div>
+    <div class="org">
+      <div class="l">Advanced Manufacturing Study Group</div>
+      <div class="v">Member</div>
+      <div class="period">2025 to Present</div>
+    </div>
+  </div>
+
+  <div class="section-head">
+    <span class="num">// 04</span>
+    <h3>Relevant coursework, <em>by track.</em></h3>
+    <span class="aside">Six courses · Sem. 5 / 6</span>
+  </div>
+
+  <div class="course-grid">
+    <div class="course-col">
+      <h6>Supply Chain &amp; ERP</h6>
+      <div class="item"><b>TI3202</b>Supply Chain &amp; Resource Planning</div>
+      <div class="item"><b>TI3207</b>Enterprise Resource Planning</div>
+    </div>
+    <div class="course-col">
+      <h6>Production &amp; Layout</h6>
+      <div class="item"><b>TI3205</b>Facility Layout Planning</div>
+      <div class="item"><b>TI3203</b>Computer Simulation</div>
+    </div>
+    <div class="course-col">
+      <h6>Optimisation &amp; Analytics</h6>
+      <div class="item"><b>TI2201</b>Operations Research I</div>
+      <div class="item"><b>TI3206</b>Systems Engineering &amp; Data Analytics</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="closing-num">&para;</div>
+    <div class="closing-body">
+      <div class="lab">Working orientation</div>
+      <h4>Bring the method, learn the floor, leave behind <em>something the team keeps using.</em></h4>
+      <p>
+        The methods in this portfolio (MILP network design, full PPIC cycle, SLP / CRAFT layout, discrete-event simulation) apply at industrial scale, not in a coursework dataset.
+        For an eight-week PKL placement my intention is straightforward: contribute directly to a live
+        problem on the floor, learn the operating context fast, and leave behind an analytical artefact (a model, a tool, a spreadsheet) that the team can extend after I leave.
+      </p>
+    </div>
+  </div>
+
+  <div class="chrome-bottom">
+    <div class="src">Radhitya Guntoro Adhi &middot; radhityaguntoroadhi@gmail.com &middot; +62 857 1603 9738 &middot; ITB Industrial Engineering.</div>
+    <div></div>
+    <div class="pn">06 / 06</div>
+  </div>
+</div>
+
+</body>
+</html>
