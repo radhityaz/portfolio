@@ -110,11 +110,11 @@ body{
 .action-title{
   font-family:var(--ff-serif);
   font-weight:400;
-  font-size:21pt;
-  line-height:1.15;
+  font-size:20pt;
+  line-height:1.12;
   letter-spacing:-0.015em;
   color:var(--ink);
-  margin:10px 0 5px 0;
+  margin:7px 0 3px 0;
   max-width:96%;
   text-wrap:balance;
 }
@@ -248,12 +248,12 @@ body{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:0;
-  margin-top:5mm;
+  margin-top:3.5mm;
   border-top:1px solid var(--ink);
   border-bottom:1px solid var(--rule);
 }
 .exec-stats > div{
-  padding:3.5mm 5mm 3.5mm 0;
+  padding:2.5mm 5mm 2.5mm 0;
   border-right:1px solid var(--rule-soft);
   display:grid;grid-template-columns:1fr;gap:2px;align-content:center;
 }
@@ -273,7 +273,7 @@ body{
   display:grid;
   grid-template-columns:1.3fr 1fr;
   gap:9mm;
-  margin-top:5mm;
+  margin-top:3.5mm;
 }
 .about-text p{
   margin-bottom:2.5mm;color:var(--ink-2);font-size:9pt;line-height:1.55;
@@ -307,8 +307,8 @@ body{
 /* ============ SECTION HEAD ============ */
 .section-head{
   display:flex;align-items:baseline;justify-content:space-between;gap:14px;
-  margin:5mm 0 3mm 0;
-  padding-bottom:2.5mm;
+  margin:3.5mm 0 2mm 0;
+  padding-bottom:2mm;
   border-bottom:1px solid var(--ink);
 }
 .section-head .num{
@@ -351,7 +351,7 @@ body{
 
 /* ============ PROJECT - LEAD CARD (hero) ============ */
 .lead{
-  margin-top:5mm;
+  margin-top:3.5mm;
   display:grid;
   grid-template-columns:1fr;
   border-top:1px solid var(--ink);
@@ -359,7 +359,7 @@ body{
 }
 .lead-head{
   display:grid;grid-template-columns:auto 1fr auto;gap:14px;
-  padding:4mm 0 3mm 0;
+  padding:3mm 0 2mm 0;
   border-bottom:1px solid var(--rule-soft);
   align-items:baseline;
 }
@@ -381,13 +381,13 @@ body{
 .lead-title{
   font-family:var(--ff-serif);font-weight:400;font-size:18pt;
   line-height:1.18;letter-spacing:-0.014em;color:var(--ink);
-  margin:3mm 0 2mm 0;text-wrap:balance;
+  margin:2mm 0 1.5mm 0;text-wrap:balance;
 }
 .lead-title em{font-style:italic;color:var(--accent);}
 
 .lead-grid{
   display:grid;grid-template-columns:1.5fr 1fr;gap:7mm;
-  padding:3mm 0;
+  padding:2mm 0;
 }
 .lead-desc{font-size:8.5pt;line-height:1.5;color:var(--ink-2);}
 .lead-desc strong{color:var(--ink);font-weight:500;}
@@ -415,7 +415,7 @@ body{
 .lead-foot{
   display:grid;grid-template-columns:repeat(4,1fr);
   gap:0;border-top:1px solid var(--rule-soft);
-  padding-top:2.5mm;padding-bottom:1mm;
+  padding-top:2mm;padding-bottom:0.5mm;
 }
 .lead-foot > div{padding-right:5mm;border-right:1px solid var(--rule-soft);}
 .lead-foot > div + div{padding-left:5mm;}
@@ -428,13 +428,13 @@ body{
 .proj{
   display:grid;grid-template-columns:1fr;
   border-top:1px solid var(--ink);
-  padding:3.5mm 0;
+  padding:2.5mm 0;
   margin-top:0;
 }
 .proj + .proj{margin-top:0;}
 .proj-head{
   display:grid;grid-template-columns:auto 1fr auto;gap:12px;
-  align-items:baseline;margin-bottom:2.5mm;
+  align-items:baseline;margin-bottom:1.5mm;
 }
 .proj-head .tag{
   font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.14em;
@@ -452,7 +452,7 @@ body{
 .proj-title{
   font-family:var(--ff-serif);font-weight:400;font-size:14pt;
   line-height:1.2;letter-spacing:-0.012em;color:var(--ink);
-  margin-bottom:2mm;
+  margin-bottom:1.5mm;
 }
 .proj-title em{font-style:italic;color:var(--accent);}
 
@@ -488,12 +488,12 @@ body{
 
 /* ============ PERSONAL PROJECT CARD ============ */
 .gh{
-  padding:4mm 0;border-top:1px solid var(--ink);
+  padding:3mm 0;border-top:1px solid var(--ink);
 }
 .gh:last-of-type{border-bottom:1px solid var(--ink);}
 .gh-head{
   display:grid;grid-template-columns:1fr auto;gap:12px;
-  align-items:baseline;margin-bottom:2mm;
+  align-items:baseline;margin-bottom:1.5mm;
 }
 .gh-tag{
   font-family:var(--ff-mono);font-size:7pt;letter-spacing:0.14em;
@@ -530,7 +530,7 @@ body{
   border-top:1px solid var(--ink);
 }
 .cert{
-  padding:4mm 5mm 4mm 0;border-right:1px solid var(--rule-soft);
+  padding:3mm 5mm 3mm 0;border-right:1px solid var(--rule-soft);
   display:grid;grid-template-columns:1fr;gap:1mm;
 }
 .cert + .cert{padding-left:5mm;}
@@ -544,7 +544,7 @@ body{
   border-top:1px solid var(--ink);
 }
 .org{
-  padding:4mm 5mm 4mm 0;border-right:1px solid var(--rule-soft);
+  padding:3mm 5mm 3mm 0;border-right:1px solid var(--rule-soft);
 }
 .org:last-child{padding-left:5mm;padding-right:0;border-right:none;}
 .org .l{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--mute);}
@@ -556,13 +556,13 @@ body{
   border-top:1px solid var(--ink);
 }
 .course-col{
-  padding:4mm 5mm 4mm 0;border-right:1px solid var(--rule-soft);
+  padding:3mm 5mm 3mm 0;border-right:1px solid var(--rule-soft);
 }
 .course-col + .course-col{padding-left:5mm;}
 .course-col:last-child{border-right:none;padding-right:0;}
 .course-col h6{font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:3mm;font-weight:500;}
 .course-col .item{
-  padding:1.8mm 0;border-bottom:1px solid var(--rule-soft);
+  padding:1.2mm 0;border-bottom:1px solid var(--rule-soft);
   font-size:8.5pt;color:var(--ink-2);line-height:1.4;
 }
 .course-col .item:last-child{border-bottom:none;}
@@ -570,14 +570,14 @@ body{
 
 /* ============ CLOSING ============ */
 .closing{
-  margin-top:5mm;
+  margin-top:3mm;
   background:var(--deep);color:#F0E9D8;
-  padding:6mm 7mm;
+  padding:3.5mm 7mm;
   display:grid;grid-template-columns:auto 1fr;gap:7mm;
   align-items:start;
 }
 .closing-num{
-  font-family:var(--ff-serif);font-style:italic;font-size:54pt;
+  font-family:var(--ff-serif);font-style:italic;font-size:36pt;
   color:var(--accent);line-height:0.85;font-weight:400;
   letter-spacing:-0.02em;
 }
@@ -586,14 +586,14 @@ body{
   color:rgba(240,233,216,0.55);text-transform:uppercase;font-weight:500;
 }
 .closing-body h4{
-  font-family:var(--ff-serif);font-weight:400;font-size:15pt;
-  line-height:1.18;letter-spacing:-0.012em;color:#F4EDDB;
-  margin:2mm 0 2.5mm 0;text-wrap:balance;
+  font-family:var(--ff-serif);font-weight:400;font-size:13pt;
+  line-height:1.15;letter-spacing:-0.012em;color:#F4EDDB;
+  margin:1.5mm 0 2mm 0;text-wrap:balance;
 }
 .closing-body h4 em{font-style:italic;color:var(--accent);}
 .closing-body p{
-  font-size:8.5pt;color:rgba(240,233,216,0.85);
-  line-height:1.55;max-width:62ch;
+  font-size:8pt;color:rgba(240,233,216,0.85);
+  line-height:1.48;max-width:62ch;
 }
 
 /* ============ PRINT ============ */
@@ -852,7 +852,7 @@ body{
   <div class="kicker">Both projects port directly to discrete-manufacturing PPIC and IE tasks. Methods listed are demonstrable on request.</div>
 
   <!-- Project A2: Supply Chain -->
-  <div class="proj" style="margin-top:5mm;">
+  <div class="proj" style="margin-top:3.5mm;">
     <div class="proj-head">
       <span class="tag">// PROJ &middot; A02</span>
       <span class="course">TI3202 &middot; Supply Chain &amp; Resource Planning &middot; Sem. 5 &middot; 2025</span>
@@ -958,7 +958,7 @@ body{
   <div class="kicker">Built on Streamlit. Each tool ingests a CSV, runs the analytical engine, and renders a Plotly dashboard. No black boxes.</div>
 
   <!-- GH 1 -->
-  <div class="gh" style="margin-top:5mm;">
+  <div class="gh" style="margin-top:3.5mm;">
     <div class="gh-head">
       <div>
         <div class="gh-tag">// PROJ &middot; P01 &middot; Python · Streamlit</div>
@@ -1058,7 +1058,7 @@ body{
     <div class="doc">06 / 06</div>
   </div>
 
-  <h2 class="action-title">One month in a warehouse, three certifications, two affiliations, six relevant courses, and a clear position on <em>what comes next.</em></h2>
+  <h2 class="action-title" style="font-size:17pt;">One month in a warehouse, three certifications, two affiliations, six relevant courses, and a clear position on <em>what comes next.</em></h2>
 
   <div class="section-head">
     <span class="num">// 01</span>
@@ -1066,8 +1066,8 @@ body{
     <span class="aside">Warehousing · 1 month</span>
   </div>
 
-  <div style="border-top:1px solid var(--ink);padding:4mm 0 4mm 0;margin-bottom:0;">
-    <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline;margin-bottom:2mm;">
+  <div style="border-top:1px solid var(--ink);padding:2mm 0 2mm 0;margin-bottom:0;">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:baseline;margin-bottom:1mm;">
       <div>
         <span style="font-family:var(--ff-mono);font-size:7.5pt;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);font-weight:500;">Outsource Staff Worker</span>
       </div>
@@ -1079,7 +1079,7 @@ body{
     </div>
   </div>
 
-  <div class="section-head" style="margin-top:5mm;">
+  <div class="section-head" style="margin-top:3.5mm;">
     <span class="num">// 02</span>
     <h3>Certifications, <em>verified May 2026.</em></h3>
     <span class="aside">HackerRank</span>
